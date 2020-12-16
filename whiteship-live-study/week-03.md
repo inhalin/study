@@ -1,23 +1,27 @@
 # 자바 라이브 스터디 3주차
 
-> 목표
+#### 목표
 
 ```
 자바가 제공하는 다양한 연산자를 학습하세요.
 ```
 
-> 학습할 것
+#### 학습할 것
 
-- 산술 연산자
-- 비트 연산자
-- 관계 연산자
-- 논리 연산자
-- instanceof
-- assignment(=) operator
-- 화살표(->) 연산자
-- 3항 연산자
-- 연산자 우선 순위
-- (optional) Java 13. switch 연산자
+`🟢 completed` `🟡 in progress` `🔘 not done`
+
+- 🟢 산술 연산자
+- 🟡 비트 연산자
+- 🟡 관계 연산자
+- 🟢 논리 연산자
+- 🟡 instanceof
+- 🟢 assignment(=) operator
+- 🟡 화살표(->) 연산자
+- 🟡 3항 연산자
+- 🟢 연산자 우선 순위
+- 🔘 (optional) Java 13. switch 연산자
+
+---
 
 ## 연산자란?
 
@@ -29,6 +33,8 @@
 
 - **피연산자의 수** - 피연산자의 수에 따라 단, 2항, 3항 연산자 세가지 종류로 나눌 수 있다. 만약 연산자가 하나의 피연산자만을 취한다면 단항 연산자(unary operator), 두 개를 취하면 2항 연산자(binary operator),세 개를 취하면 3항 연산자(ternary operator)라고 부른다.
 - **수행하는 연산의 종류** 피연산자에 대해 수행하는 연산의 종류에 따라 산술 연산자(arithmatic operator), 관계 연산자(relational operator), 논리 연산자(logical operator), 비트 연산자(bitwise operator)라고 부른다.
+
+---
 
 ## 산술 연산자
 
@@ -68,6 +74,8 @@ division=3.25
 remain=1.5
 ```
 
+---
+
 ## 비트 연산자
 
 비트연산자는 피연산자 **각각의 비트를 조작**한다. 자바는 여러가지 비트연산자를 정의하고, 이 연산자들은 정수유형인 long, int short, char, byte의 에 적용된다.
@@ -81,6 +89,8 @@ remain=1.5
 `<<`| **이진 Left Shift 연산자**는 왼쪽 피연산자값을 연산자 오른쪽에서 지정한 수만큼 왼쪽으로 이동, 비어있는 비트를 0으로 채운다.
 `>>`| **이진 Right Shift 연산자**는 왼쪽 피연산자 값을 연산자 오른쪽에서 지정한 수만큼 오른쪽으로 이동, 부호비트를 이용해서 비어있는 비트를 채운다. 예를 들어, 피연산자의 수가 양수이면 0으로, 음수이면 1로 채운다.
 `>>>`| **Shift right zero fill 연산자**는 `>>` 연산자와 같이 오른쪽으로 이동시키고, 비어있는 곳을 0으로 채운다.
+
+---
  
 ## 관계 연산자
 
@@ -97,10 +107,12 @@ remain=1.5
 `>=`| 왼쪽 값이 오른쪽 값보다 크거나 같으면 `true`를 반환
 `<=`| 왼쪽 값이 오른쪽 값보다 작거나 같으면 `true`를 반환
 
+---
+
 ## 논리 연산자
 
 연산자 | 설명
----|------------------------------------
+--|------------------------------------
 `!`| 피연산자 값이 false이면 `true`를 반환
 `&&`| 피연산자 값이 둘다 true 이면 `true`를 반환, 왼쪽 값이 false이면 오른쪽은 계산하지 않고 넘어간다. `ex01`
 `&`| 피연산자 값이 둘다 true 이면 `true`를 반환
@@ -112,6 +124,7 @@ remain=1.5
 
 
 #### `&&` vs `&`, `||` vs `|`
+
 ```java
 public class Ex01 {
 	public static void main(String[] args) {
@@ -126,11 +139,15 @@ public class Ex01 {
 	}
 }
 ```
+
 > 결과
+
 ```java
 short-circuit AND operator '&&' 사용시 : b=6
 logical AND operator '&' 사용시 : b=7
 ```
+
+---
 
 ## instanceof
 
@@ -138,6 +155,8 @@ logical AND operator '&' 사용시 : b=7
 
 - 변수가 특정 클래스, 즉 구현된 인터페이스나 상위클래스나 상위 인터페이스의 인스턴스이면 `true`를 반환하고 이는 참조변수가 검사한 타입으로 형변환이 가능하다는 뜻이다.
 - 변수가 특정 클래스의 인스턴스가 아니거나 변수가 null이면 `false`를 반환
+
+---
 
 ## assignment(=) operator
 
@@ -154,11 +173,14 @@ public class Ex01 {
 	}
 }
 ```
+
 > 결과
+
 ```java
 첫번째 a=2
 두번째 a=3
 ```
+
 대입연산자의 왼쪽 피연산자를 lvalue(left value), 오른쪽 피연산자를 rvalue(right value)라고 한다. rvalue는 변수, 식, 상수 등 모두 가질 수 있지만 lvalue는 변수와 같이 값을 변경할 수 있어야 한다. 따라서 리터럴이나 상수같이 값을 저장할 수 없는 것은 lvalue가 될 수 없다.
 
 ```java
@@ -169,39 +191,49 @@ public class Ex02 {
 	}
 }
 ```
+
 > 결과
+
 ```java
 Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
 	The left-hand side of an assignment must be a variable
 ```
----
+
 ```java
 public class Ex03 {
 	final double pi=3.14;   // 변수 앞에 final을 붙이면 상수가 된다.
 	pi=10.0;
 }
 ```
+
 > 결과
+
 ```java
 Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
 	The left-hand side of an assignment must be a variable
 ```
+
+---
 
 ## 화살표(->) 연산자
 
 <!-- 아직 잘 모르겠음.. -->
 
 자바에서 사용하는 람다 표현식으로 왼쪽에 매개변수목록, 오른쪽에 함수를 갖는다. 
+
 ```
 (매개변수1, 매개변수2, ...) -> {함수}
 ```
+
 - 매개변수의 타입을 추론할 수 있는 경우 타입을 생략할 수 있다.
 - 매개변수가 하나인 경우에는 괄호를 생략할 수 있다.
 
+---
 
 ## 3항 연산자
 
 3항 연산자 `?:`는 세 개의 피연산자를 필요로 하고 종류는 조건 연산자 하나뿐이다. `조건식 ? 식1 : 식2`의 모양을 가지고 있고, 조건식이 true이면 식1을, false이면 식2를 결과값으로 갖는다.
+
 ```java
 public class Ex01 {
 	public static void main(String[] args) {
@@ -212,10 +244,14 @@ public class Ex01 {
 	}
 }
 ```
+
 > 결과
+
 ```java
 5
 ```
+
+---
 
 ## 연산자 우선 순위
 
@@ -237,13 +273,7 @@ public class Ex01 {
 --- | --> | `?:`
 대입연산자 | **<--** | `=` `+=` `-=` `*=` `/=` `%=` `<<=` `>>=` `&=` `^=` `!=`
 
-<!-- 아직 못한 부분
-
- ## (optional) Java 13. switch 연산자 
-
--->
-
-
+---
 
 ## 참고자료
 
