@@ -10,7 +10,7 @@
 
 > 학습할 것
 
-`🟢 completed` `🟡 in progress` `🔘 not done`
+`🟢 completed` `🟡 in progress` `⚪ not done`
 
 - 🟢 JVM이란 무엇인가
 - 🟢 컴파일 하는 방법

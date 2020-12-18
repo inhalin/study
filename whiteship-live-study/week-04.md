@@ -8,19 +8,19 @@
 
 #### 학습할 것
 
-`🟢 completed` `🟡 in progress` `🔘 not done`
+`🟢 completed` `🟡 in progress` `⚪ not done`
 
 - 🟢 선택문
 - 🟢 반복문
 
 #### 과제 (Optional)
 
-- 🔘 JUnit5 테스트
-- 🔘 live-study 대시보드 코드
-- 🔘 LinkedList
-- 🔘 Stack
-- 🔘 앞서 만든 ListNode를 사용한 Stack
-- 🔘 Queue
+- ⚪ JUnit5 테스트
+- ⚪ live-study 대시보드 코드
+- ⚪ LinkedList
+- ⚪ Stack
+- ⚪ 앞서 만든 ListNode를 사용한 Stack
+- ⚪ Queue
 
 ---
 

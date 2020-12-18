@@ -8,7 +8,7 @@
 
 #### 학습할 것
 
-`🟢 completed` `🟡 in progress` `🔘 not done`
+`🟢 completed` `🟡 in progress` `⚪ not done`
 
 - 🟢 산술 연산자
 - 🟡 비트 연산자
@@ -19,7 +19,7 @@
 - 🟡 화살표(->) 연산자
 - 🟡 3항 연산자
 - 🟢 연산자 우선 순위
-- 🔘 (optional) Java 13. switch 연산자
+- ⚪ (optional) Java 13. switch 연산자
 
 ---
 
