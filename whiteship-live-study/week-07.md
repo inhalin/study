@@ -263,13 +263,13 @@ public      // 접근 제한 없음
 
 ### 접근 범위 
 
-![access modifier](img/week7/access-modifier.PNG)
+![access modifier](img/week7/access-modifier.png)
 
 `public`은 접근 제한이 전혀 없고 `private`은 같은 클래스 내에서만 사용하도록 제한하는 가장 높은 제한이다. `default`는 같은 패키지 내의 클래스에서만 접근이 가능하다. `protected`는 패키지에 관계없이 상속관계에 있는 자손클래스에서만 접근에 가능하다.
 
 ### 접근제어자 사용 가능 대상
 
-![modifier usage](img/week7/modifier-usage.png)
+![modifier usage](img/week7/modifier-usage.PNG)
 
 ### 접근제어자를 이용한 캡슐화
 
