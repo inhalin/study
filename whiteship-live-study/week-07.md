@@ -33,12 +33,12 @@ Date 클래스는 동일 클래스 이름으로 java.util 패키지에 속한 Da
 
 ![date package](img/week7/date_pkg.png)
 
-```
+### 정리
+
 - 하나의 소스파일에는 첫 줄에 단 한 번의 패키지 선언만을 허용한다.
 - 모든 클래스는 반드시 하나의 패키지에 속해야 한다.
 - 패키지는 점(.) 을 구분자로 하여 계층구조로 구성할 수 있다.
 - 패키지는 물리적으로 클래스파일(.class)을 포함하는 하나의 디렉토리이다.
-```
 
 ---
 
@@ -129,29 +129,30 @@ public class StaticImport{
 ### 윈도우에서 설정하기
 
 윈도우에서 사용자 환경변수는 아래의 순서에 따라 해준다.
+
 1. `This PC > Properties` 또는 `제어판(Control Panel) > 시스템 및 보안(Systems and Security) > 시스템(System)`
 
-![classpath 환경변수 설정 1](img/week7/classpath-01.png)
+    ![classpath 환경변수 설정 1](img/week7/classpath-01.png)
 
 2. 왼쪽 목록에서 `고급 시스템 설정(Advanced system settings) > 환경 변수(Environment Variables)`의 시스템 변수(System Variables) 섹션에서 `New` 클릭
 
-![classpath 환경변수 설정 2](img/week7/classpath-02.png)
+    ![classpath 환경변수 설정 2](img/week7/classpath-02.png)
 
 3. 변수 이름은 `JAVA_HOME`으로, 변수 값은 자바 jdk가 설치되어 있는 폴더로 지정해준다.
 
-![classpath 환경변수 설정 3](img/week7/classpath-03.png)
+    ![classpath 환경변수 설정 3](img/week7/classpath-03.png)
 
 4. 시스템 변수의 `Path` 선택 후 `편집(Edit)` 클릭
 
-![classpath 환경변수 설정 4](img/week7/classpath-04.png)
+    ![classpath 환경변수 설정 4](img/week7/classpath-04.png)
 
 5. `새로 만들기(New)` 클릭 후 `%JAVA_HOME%\bin` 입력
 
-![classpath 환경변수 설정 5](img/week7/classpath-05.png)
+    ![classpath 환경변수 설정 5](img/week7/classpath-05.png)
 
 6. 전부 저장해주고 cmd창에서 `javac`, `java` 명령어가 잘 되는지 확인
 
-![classpath 환경변수 설정 6](img/week7/classpath-06.png)
+    ![classpath 환경변수 설정 6](img/week7/classpath-06.png)
 
 시스템 변수에서 새로 만들기 하지 않고 Path에서 바로 `jdk설치된폴더\bin`을 추가해줘도 상관은 없다.
 
@@ -169,45 +170,45 @@ set CLASSPATH=.;C:\(자바 jdk가 설치된 폴더)\lib;
 
 1. 클래스패스에 jar 파일 하나 추가하기
 
-```PowerShell
-# windows
-set CLASSPATH=.;C:\dependency\myapp.jar
+    ```PowerShell
+    # windows
+    set CLASSPATH=.;C:\dependency\myapp.jar
 
-# Linux/unix
-set CLASSPATH=.:/dependency/myapp.jar
-```
+    # Linux/unix
+    set CLASSPATH=.:/dependency/myapp.jar
+    ```
 
 2. 클래스패스에 jar 파일 여러개 추가하기
 
-두개 이상의 jar 파일을 추가하고 싶다면 사용하는 os에 맞는 구분자를 써서 나열해준다. 디렉토리에 있는 모든 jar 파일을 추가하고 싶다면 와일드카드 문자 `*`를 사용해주면 된다.
+    두개 이상의 jar 파일을 추가하고 싶다면 사용하는 os에 맞는 구분자를 써서 나열해준다. 디렉토리에 있는 모든 jar 파일을 추가하고 싶다면 와일드카드 문자 `*`를 사용해주면 된다.
 
-```PowerShell
-# windows use ;
-set CLASSPATH=.;C:\dependency\myapp.jar;C:\location\yourapp.jar
+    ```PowerShell
+    # windows use ;
+    set CLASSPATH=.;C:\dependency\myapp.jar;C:\location\yourapp.jar
 
-# Linux/Unix use :
-set CLASSPATH=.:/dependency/myapp.jar:/location/*.jar
-```
+    # Linux/Unix use :
+    set CLASSPATH=.:/dependency/myapp.jar:/location/*.jar
+    ```
 
 3. 클래스패스에 class 추가하기
 
-class를 추가하고 싶으면 그냥 class 파일이 있는 폴더를 추가해준다.
+    class를 추가하고 싶으면 그냥 class 파일이 있는 폴더를 추가해준다.
 
-```PowerShell
-# windows
-set CLASSPATH=C:\dependency;C:\location
+    ```PowerShell
+    # windows
+    set CLASSPATH=C:\dependency;C:\location
 
-# Linux/Unix
-set CLASSPATH=/dependency:/location
-```
+    # Linux/Unix
+    set CLASSPATH=/dependency:/location
+    ```
 
 5. 클래스패스 설정 해제하기
 
-CLASSPATH 환경변수가 잘못 설정된 경우에는 빈 값을 지정해서 classpath 설정을 해제할 수 있다.
+    CLASSPATH 환경변수가 잘못 설정된 경우에는 빈 값을 지정해서 classpath 설정을 해제할 수 있다.
 
-```PowerShell
-set CLASSPATH=
-```
+    ```PowerShell
+    set CLASSPATH=
+    ```
 
 ---
 
@@ -223,19 +224,20 @@ java -cp .;c:\jars myapp.jar
 - 플래스를 추가하고 싶다면, 클래스가 있는 폴더의 전체경로를 지정해준다.
 - jar 파일을 추가하고 싶다면, jar 파일이 있는 폴더의 전체경로를 쓰고 끝에 `*`를 붙여준다.
 
-```PowerShell
--cp c:\dependency     # c:/dependency 에 있는 모든 클래스 포함
--cp c:\dependency\*   # c:/dependency 에 있는 모든 jar 파일 포함
--cp c:\dependency;c:dependency\*  # 모든 클래스 및 jar 파일 포함
-```
+    ```PowerShell
+    -cp c:\dependency     # c:/dependency 에 있는 모든 클래스 포함
+    -cp c:\dependency\*   # c:/dependency 에 있는 모든 jar 파일 포함
+    -cp c:\dependency;c:dependency\*  # 모든 클래스 및 jar 파일 포함
+    ```
 
-> classpath에서 지정해준 디렉토리의 하위 디렉토리는 포함되지 않는다. `-cp c:/dependency/*`를 해준다고 dependency 폴더에 있는 하위 디렉토리에 있는 파일들이 포함되는 것은 아니라는 의미이다.
+> classpath에서 지정해준 디렉토리의 하위 디렉토리는 포함되지 않는다. `-cp c:/dependency/*`를 해준다고 dependency 디렉토리의 하위 디렉토리에 있는 파일들이 포함되는 것은 아니라는 의미이다.
 
 ---
 
 ## 지정된 `CLASSPATH` 값 확인
 
 언제든지 `CLASSPATH` 변수로 지정된 모든 경로 항목을 보고 싶다면 `echo` 명령어를 시용한다.
+
 ```PowerShell
 # Windows
 echo %CLASSPATH%
