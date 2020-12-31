@@ -4,3 +4,4 @@
 - 3일차 : 기본자료형
 - 4일차 : Simple Calculator 1.0 - 기본연산자 계산기 
 - 5일차 : Simple Calculator 2.0 - 기본연산자 계산기 예외처리, 반복실행
+- 6일차 : 조건문, Simple Calculator 3.0
