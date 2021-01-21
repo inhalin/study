@@ -133,22 +133,26 @@ MyRunnable is Thread-2
 public class UsefulThreadMethods {
     public static void main(String[] args) throws InterruptedException {
         NamedThread t1 = new NamedThread();
-        Thread t2 = new Thread(new NamedRunnable(), "my first named runnable");
+        Thread t2 = new Thread(new NamedRunnable(), "named runnable");
         t2.setDaemon(true);
-        System.out.println("t2 Current state : " + t2.getState());
-
         t2.start();
 
         Thread.sleep(3000);
+
+        // start() 호출 전 상태
+        System.out.println("t1 Current state : " + t1.getState());
+
         t1.start();
+
+        // start() 호출 후 상태
+        System.out.println("t1 Current state : " + t1.getState());
     }
 }
 
 class NamedThread extends Thread {
     public void run() {
-        setName("my first named thread");
-        System.out.println("Name : " + getName() + ", ID : " + getId() + ", DaemonThread : " + isDaemon());
-        System.out.println("t1 Current state : " + getState());
+        setName("named thread");
+        System.out.println(toString() + ", ID : " + getId() + ", DaemonThread : " + isDaemon());
     }
 }
 
@@ -157,7 +161,7 @@ class NamedRunnable implements Runnable {
         while (true){
             try {
                 Thread.sleep(1000);
-                System.out.print("Name : " + Thread.currentThread().getName() + ", ID : " + Thread.currentThread().getId() + ", DaemonThread : " + Thread.currentThread().isDaemon() + "\n");
+                System.out.println(Thread.currentThread().toString() + ", ID : " + Thread.currentThread().getId() + ", DaemonThread : " + Thread.currentThread().isDaemon());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -169,12 +173,11 @@ class NamedRunnable implements Runnable {
 > 결과
 
 ```
-t2 Current state : NEW
-Name : my first named runnable, ID : 14, DaemonThread : true
-Name : my first named runnable, ID : 14, DaemonThread : true
-Name : my first named runnable, ID : 14, DaemonThread : true
-Name : my first named thread, ID : 13, DaemonThread : false
+Thread[named runnable,5,main], ID : 14, DaemonThread : true
+Thread[named runnable,5,main], ID : 14, DaemonThread : true
+t1 Current state : NEW
 t1 Current state : RUNNABLE
+Thread[named thread,5,main], ID : 13, DaemonThread : false
 ```
 
 ### 쓰레드에서 사용하면 안되는 메서드
