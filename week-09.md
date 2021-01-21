@@ -54,10 +54,8 @@
 
 2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
 
-3. https://howtodoinjava.com/java9/java9-new-features-enhancements/#interface-private-methods
+3. https://docs.oracle.com/javase/specs/jls/se15/html/jls-11.html
 
-4. https://docs.oracle.com/javase/tutorial/java/IandI/index.html
+4. https://howtodoinjava.com/java/exception-handling/
 
-5. https://docs.oracle.com/javase/specs/jls/se15/html/jls-9.html
-
-6. http://www.tcpschool.com/java/java_polymorphism_interface
+5. http://www.tcpschool.com/java/java_exception_intro
