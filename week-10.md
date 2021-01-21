@@ -201,7 +201,7 @@ t1 Current state : RUNNABLE
 
 이미지 출처 : https://www.baeldung.com/wp-content/uploads/2018/02/Life_cycle_of_a_Thread_in_Java.jpg
 
-#### `NEW` , `RUNNABLE`
+#### NEW , RUNNABLE
 
 ```java
 public class NewState {
@@ -222,7 +222,7 @@ class NewRunnable implements Runnable{
 
 ```
 
-#### `BLOCKED`
+#### BLOCKED
 
 ```java
 public class BlockedState {
@@ -254,7 +254,7 @@ class BlockedRunnable implements Runnable {
 }
 ```
 
-#### `WAITING`
+#### WAITING
 
 ```java
 public class WaitingState implements Runnable{
@@ -283,7 +283,7 @@ class WaitingRunnable implements Runnable {
 }
 ```
 
-#### `TIMED_WAITING`
+#### TIMED_WAITING
 
 ```java
 public class TimedWaitingState {
@@ -307,7 +307,7 @@ class TimedWaitingRunnable implements Runnable{
 }
 ```
 
-#### `TERMINATED`
+#### TERMINATED
 
 ```java
 public class TerminatedState implements Runnable{
@@ -601,7 +601,7 @@ writing completed
 
 #### 특정영역을 임계영역으로 지정
 
-메서드 내의 코드 일부를 블럭으로 감싸고 그 앞에 `synchronized(참조변수)`붙여서 사용할 수 있다. 이때 참조변수는 락을 걸고자 하는 객체를 참조해야 한다. 이 블럭을 synchronized 블럭이라고 하고 이 객채의 블럭이 임계영역이 된다. 쓰레드는 임계영역에 대해 lock을 얻고 동기화된 명령문의 바디 부분을 실행한다. 바디 부분의 동작이 정상적이든 예외를 뱉든 완료된다면 해당 임계영역은 자동으로 unlock된다.
+메서드 내의 코드 일부를 블럭으로 감싸고 그 앞에 `synchronized(참조변수)`를 붙여서 사용할 수 있다. 이때 참조변수는 락을 걸고자 하는 객체를 참조해야 한다. 이 블럭을 synchronized 블럭이라고 하고 이 객채의 블럭이 임계영역이 된다. 쓰레드는 임계영역에 대해 lock을 얻고 동기화된 명령문의 바디 부분을 실행한다. 바디 부분의 동작이 정상적이든 예외를 뱉든 완료된다면 해당 임계영역은 자동으로 unlock된다.
 
 #### 메서드를 임계영역으로 지정
 
