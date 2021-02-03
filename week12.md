@@ -43,12 +43,11 @@ public void someMethod(){
 @SafeVarargs | 지네릭스 타입의 가변인자에 사용한다.
 @FunctionalInterface | 함수형 인터페이스라는 것을 알린다.
 @Nativenative | 메서드에서 참조되는 상수 앞에 붙인다.
- | 
-* @Target | 애너테이션이 적용가능한 대상을 지정하는데 사용한다.
-* @Documented | 애너테이션 정보가 javadoc으로 작성된 문서에 포함되게 한다.
-* @Inherited | 애너테이션이 자손 클래스에 상속되도록 한다.
-* @Retention | 애너테이션이 유지되는 범위를 지정하는데 사용한다.
-* @Repeatable | 애너테이션을 반복해서 적용할 수 있게 한다.
+@Target * | 애너테이션이 적용가능한 대상을 지정하는데 사용한다.
+@Documented * | 애너테이션 정보가 javadoc으로 작성된 문서에 포함되게 한다.
+@Inherited * | 애너테이션이 자손 클래스에 상속되도록 한다.
+@Retention * | 애너테이션이 유지되는 범위를 지정하는데 사용한다.
+@Repeatable * | 애너테이션을 반복해서 적용할 수 있게 한다.
 
 <small>* 표시 : 메타 애너테이션</small> 
 
