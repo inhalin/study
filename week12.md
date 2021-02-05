@@ -10,11 +10,11 @@
 
 `🟢 completed` `🟡 in progress` `⚪ not done`
 
-- ⚪ 애노테이션 정의하는 방법
-- ⚪ @Retention
-- ⚪ @Target
-- ⚪ @Documented
-- ⚪ 애노테이션 프로세서
+- 🟢 애노테이션 정의하는 방법
+- 🟡 @Retention
+- 🟡 @Target
+- 🟡 @Documented
+- 🟡 애노테이션 프로세서
 
 ---
 
@@ -42,7 +42,7 @@ public void someMethod(){
 @SupperessWarnings | 컴파일러의 특정 경고메시지가 나타나지 않게 해준다
 @SafeVarargs | 지네릭스 타입의 가변인자에 사용한다.
 @FunctionalInterface | 함수형 인터페이스라는 것을 알린다.
-@Nativenative | 메서드에서 참조되는 상수 앞에 붙인다.
+@Native | 메서드에서 참조되는 상수 앞에 붙인다.
 @Target * | 애너테이션이 적용가능한 대상을 지정하는데 사용한다.
 @Documented * | 애너테이션 정보가 javadoc으로 작성된 문서에 포함되게 한다.
 @Inherited * | 애너테이션이 자손 클래스에 상속되도록 한다.
@@ -101,31 +101,168 @@ list.add(Obj);
 
 ## 애너테이션 정의하는 방법
 
+새로운 앤테이션을 정의하는 방법은 `@` 기호를 붙이는 것을 제외하면 인터페이스를 정의하는 것과 똑같다. 
 
+```java
+public @interface PersonalInfo {
+    String name();
+    int age();
+    String livesIn();
+    String[] familyMember();
+    Birthday birthday();  // 다른 애너테이션 포함 가능
+}
+
+@interface Birthday{
+    String yymmdd();
+}
+```
+
+#### 애너테이션 요소
+
+애너테이션 내에 선언된 메서드를 에너테이션 의 요소(elements)라고 한다. 애너테이션의 요소는 반환값이 있고 매개변수는 없는 추상 메서드 형태이고 상속을 통해 구현하지 않아도 된다. 다만 애너테이션을 적용할 때 요소들의 값을 전부 지정해줘야 한다. 요소의 이름을 같이 써주기 때문에 순서는 상관없다.
+
+애너테이션의 각 요소는 기본값을 가질 수 있고 애너테이션 요소가 하나뿐일때는 요소의 이름을 생각하고 값만 적어도 된다. 요소의 타입이 배열인 경우 대괄호를 사용해 값을 여러개 지정할 수 있다. 값이 하나일 때는 괄호 생략가능하다.
+
+```java
+@PersonalInfo(
+    age = 20,     // 순서가 바뀌어도
+    name = "Kim", // 상관없다.
+    livesIn = "Seoul",
+    familyMember = {"mom", "sister"}, // 요소가 두개 이상인 배열은 대괄호 사용
+    birthday = @Birthday(yymmdd = "010101")
+)
+static String myInfo ="All about me";
+```
+
+#### 애너테이션 요소의 규칙
+
+- 요소의 타입은 기본형, String, enum, 애너테이션, Class 만 허용된다.
+- 괄호 안에 매개변수를 선언할 수 없다.
+- 예외를 선언할 수 없다.
+- 요소를 타입 매개변수로 정의할 수 없다.
 
 ---
 
 ## @Retention
 
+애너테이션이 유지되는 기간을 지정하는데 사용된다. 
 
+유지정책 | 의미
+---|---
+SOURCE | 소스 파일에만 존재. 클래스파일에는 존재하지 않음
+CLASS | 클래스 파일에 존재. 실행시 사용불가. 기본값
+RUNTIME | 클래스 파일에 존재. 실행시에 사용가능
+
+`@Override`나 `@SuppressWarnings`처럼 컴파일러가 사용하는 애너테이션은 유지정책이 SOURCE이다. `@FunctionalInterface`는 `@Override`처럼 컴파일러가 체크해주는 애너테이션이지만 실행시에도 사용되기 때문에 유지정책이 RUNTIME이다. 지역변수에 붙은 애너테이션은 컴파일러만 인식할 수 있기 때문에 지역변수에 유지정책이 RUNTIME인 애너테이션을 붙여도 실행시에 인식되지 않는다.
+```java
+// @Override 
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.SOURCE) // retention policy 가 SOURCE인 것을 확인할 수 있다.
+public @interface Override {
+}
+
+// @SuppressWarnings
+@Target({TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE, MODULE})
+@Retention(RetentionPolicy.SOURCE) // 동일
+public @interface SuppressWarnings {
+    String[] value();
+}
+
+```
 
 ---
 
 ## @Target
 
+애너테이션이 적용가능한 대상을 지정하는데 사용한다. `@Target`으로 지정할 수 있는 애너테이션 적용대상의 종류는 아래 표와 같다.
 
+대상타입 | 의미
+---|---
+ANNOTATION_TYPE | 애너테이션
+CONSTRUCTOR | 생성자
+FIELD | 필드(멤버변수, enum 상수)
+LOCAL_VARIABLE | 지역변수
+METHOD | 메서드
+PACKAGE | 패키지
+PARAMETER | 매개변수
+TYPE | 타입(클래스, 인터페이스, enum)
+TYPE_PARAMETER | 타입 매개변수
+TYPE_USE | 타입이 사용되는 모든 곳
 
 ---
 
 ## @Documented
 
+애너테이션에 대한 정보가 javadoc으로 작성한 문서에 포함되도록 한다. 자바에서 제공하는 기본 애너테이션 중에 `@Override`와 `@SuppressWarnings`를 제외하고 모두 이 메타 에너테이션이 붙어있다.
 
+```java
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(value={CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, MODULE, PARAMETER, TYPE})
+public @interface Deprecated { 
+  //생략 
+}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.CONSTRUCTOR, ElementType.METHOD})
+public @interface SafeVarargs {}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface FunctionalInterface {} 
+
+@Documented
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.SOURCE)
+public @interface Native {}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.ANNOTATION_TYPE)
+public @interface Target {
+    //생략 
+}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.ANNOTATION_TYPE)
+public @interface Documented {}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.ANNOTATION_TYPE)
+public @interface Inherited {}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.ANNOTATION_TYPE)
+public @interface Retention {
+    //생략 
+}
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.ANNOTATION_TYPE)
+public @interface Repeatable {
+    //생략 
+}
+```
 
 ---
 
 ## 애노테이션 프로세서
 
+애너테이션 프로세싱은 컴파일시에 애너테이션을 해석해서 그에 따라서 클래스를 만든다. 순서는 다음과 같다.
 
+    1. 애너테이션 클래스를 만든다.
+    2. 애너테이션 파서 클래스를 만든다.
+    3. 프로젝트에 애너테이션을 쓴다.
+    4. 컴파일을 하면 애너테이션 파스가 애너테이션을 해석한다.
+    5. 빌드폴더에 자동생성된 클래스 파일이 추가된다.
+
+애너테이션 프로세싱은 컴파일시에 애너테이션의 스캐닝과 프로세싱을 위해 javac에 내장되어 있는 툴이다. 특정 애너테이션에 대해서 본인의 애너테이션 프로세서를 만들 수 있다. 애너테이션 프로세싱은 Java 5부터 사용할 수 있었지만 실제로 유용하게 사용할 수 있는 API는 Java 6부터 나왔다.특정 애너테이션에 대한 애너테이션 프로세서는 자바 코드(또는 컴파일된 바이트코드)를 입력받아서 파일(보통은 .java 파일)로 출력한다. 
 
 ---
 
@@ -135,12 +272,16 @@ list.add(Obj);
 
 2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
 
-3. https://docs.oracle.com/javase/specs/jls/se15/html/jls-17.html
+3. https://docs.oracle.com/javase/specs/jls/se15/html/jls-9.html#jls-9.6
 
-4. https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.State.html
+4. https://docs.oracle.com/javase/tutorial/java/annotations/index.html
 
-5. https://howtodoinjava.com/java/multi-threading/
+5. https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html
 
-6. http://www.tcpschool.com/java/java_thread_concept
+6. https://howtodoinjava.com/java/annotations/complete-java-annotations-tutorial/
 
-7. https://www.baeldung.com/java-daemon-thread
+7. https://www.baeldung.com/java-default-annotations
+
+8. http://hannesdorfmann.com/annotation-processing/annotationprocessing101/
+
+9. https://medium.com/@jintin/annotation-processing-in-java-3621cb05343a
