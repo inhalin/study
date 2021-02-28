@@ -1,5 +1,4 @@
-
-# 자바 라이브 스터디 5주차
+# [자바 라이브 스터디] 5주차 - 클래스
 
 #### 목표
 
@@ -362,12 +361,9 @@ class MyObject{
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://howtodoinjava.com/java/oops/object-oriented-programming/
-
-4. https://docs.oracle.com/javase/tutorial/java/javaOO/index.html
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://howtodoinjava.com/java/oops/object-oriented-programming/
+- https://docs.oracle.com/javase/tutorial/java/javaOO/index.html
 
 <!-- 객체지향의 사실과 오해 -->

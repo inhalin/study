@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 4주차
+# [자바 라이브 스터디] 4주차 - 제어문
 
 #### 목표
 
@@ -668,8 +668,6 @@ ListNode를 사용해서 한번.
 
 ## 참고자료
 
-남궁성. _Java의 정석 3판._ 도우출판, 2016.
-
-Evans, Benjamin J. and David Flanagan. _Java in a Nutshell._ O'Reilly Media, 2019.
-
-https://howtodoinjava.com/java/flow-control/control-flow-statements/
+- 남궁성. _Java의 정석 3판._ 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. _Java in a Nutshell._ O'Reilly Media, 2019.
+- https://howtodoinjava.com/java/flow-control/control-flow-statements/

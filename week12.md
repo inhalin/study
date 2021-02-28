@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 12주차
+[자바 라이브 스터디] 12주차 - 애노테이션
 
 #### 목표
 
@@ -268,20 +268,12 @@ public @interface Repeatable {
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://docs.oracle.com/javase/specs/jls/se15/html/jls-9.html#jls-9.6
-
-4. https://docs.oracle.com/javase/tutorial/java/annotations/index.html
-
-5. https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html
-
-6. https://howtodoinjava.com/java/annotations/complete-java-annotations-tutorial/
-
-7. https://www.baeldung.com/java-default-annotations
-
-8. http://hannesdorfmann.com/annotation-processing/annotationprocessing101/
-
-9. https://medium.com/@jintin/annotation-processing-in-java-3621cb05343a
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://docs.oracle.com/javase/specs/jls/se15/html/jls-9.html#jls-9.6
+- https://docs.oracle.com/javase/tutorial/java/annotations/index.html
+- https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html
+- https://howtodoinjava.com/java/annotations/complete-java-annotations-tutorial/
+- https://www.baeldung.com/java-default-annotations
+- http://hannesdorfmann.com/annotation-processing/annotationprocessing101/
+- https://medium.com/@jintin/annotation-processing-in-java-3621cb05343a

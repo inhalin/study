@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 3주차
+# [자바 라이브 스터디] 3주차 - 연산자
 
 #### 목표
 
@@ -277,13 +277,9 @@ public class Ex01 {
 
 ## 참고자료
 
-남궁성. _Java의 정석 3판._ 도우출판, 2016.
-
-https://howtodoinjava.com/java/basics/data-types-in-java/
-
-https://www.oreilly.com/library/view/java-8-pocket/9781491901083/
-
-https://www.tutorialspoint.com/Bitwise-right-shift-operator-in-Java
-
-http://www.tcpschool.com/java/java_lambda_concept
+- 남궁성. _Java의 정석 3판._ 도우출판, 2016.
+- https://howtodoinjava.com/java/basics/data-types-in-java/
+- https://www.oreilly.com/library/view/java-8-pocket/9781491901083/
+- https://www.tutorialspoint.com/Bitwise-right-shift-operator-in-Java
+- http://www.tcpschool.com/java/java_lambda_concept
 

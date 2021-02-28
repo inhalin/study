@@ -1,6 +1,4 @@
-# 자바 라이브 스터디 1주차
-
-## JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가
+# [자바 라이브 스터디] 1주차 - JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가
 
 > 목표
 
@@ -141,13 +139,10 @@ JVM은 Java 애플리케이션을 실행하는 런타임 환경의 규격이다.
 
 ## 참고자료
 
-남궁성. _Java의 정석 3판._ 도우출판, 2016.
-
-Evans, Benjamin J. and David Flanagan. _Java in a Nutshell._ O'Reilly Media, 2019.
-
-https://howtodoinjava.com/java/basics/java-tutorial/
-
-https://www.oracle.com/java/technologies/jpl-part-1.html
+- 남궁성. _Java의 정석 3판._ 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. _Java in a Nutshell._ O'Reilly Media, 2019.
+- https://howtodoinjava.com/java/basics/java-tutorial/
+- https://www.oracle.com/java/technologies/jpl-part-1.html
 
 
 <!-- 

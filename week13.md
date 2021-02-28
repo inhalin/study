@@ -1,8 +1,7 @@
 # [자바 라이브 스터디] 13주차 - I/O
 
-> I/O(Input/Output, 입출력) : 컴퓨터 내부 또는 외부의 장치와 프로그램간의 데이터를 주고받는 것을 말한다.
-
-#### 목표
+> I/O(Input/Output, 입출력) : 컴퓨터 내부 또는 외부의 치와 프로그램간의 데이터를 주고받는 것을 말한다.
+-### 목표
 
 ```
 자바의 Input과 Output에 대해 학습하세요.
@@ -391,14 +390,9 @@ public class WriteFileFOS {
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://docs.oracle.com/javase/tutorial/essential/io/index.html
-
-4. https://howtodoinjava.com/java-io-tutorial/
-
-5. https://www.tcpschool.com/java/java_io_stream
-
-6. https://www.baeldung.com/java-io
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://docs.oracle.com/javase/tutorial/essential/io/index.html
+- https://howtodoinjava.com/java-io-tutorial/
+- https://www.tcpschool.com/java/java_io_stream
+- https://www.baeldung.com/java-io

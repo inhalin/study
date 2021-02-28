@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 6주차
+# [자바 라이브 스터디] 6주차 - 상속
 
 #### 목표
 
@@ -10,7 +10,7 @@
 
 `🟢 completed` `🟡 in progress` `⚪ not done`
 
-- 🟡 자바 상속의 특징
+- 🟢 자바 상속의 특징
 - ⚪ super 키워드
 - ⚪ 메소드 오버라이딩
 - ⚪ 다이나믹 메소드 디스패치 (Dynamic Method Dispatch)
@@ -90,10 +90,7 @@ class Child extends Parent{
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://howtodoinjava.com/java/oops/object-oriented-programming/
-
-4. https://docs.oracle.com/javase/tutorial/java/javaOO/index.html
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://howtodoinjava.com/java/oops/object-oriented-programming/
+- https://docs.oracle.com/javase/tutorial/java/javaOO/index.html

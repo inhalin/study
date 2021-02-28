@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 8주차
+# [자바 라이브 스터디] 8주차 - 인터페이스
 
 #### 목표
 
@@ -313,14 +313,9 @@ interface CustomCalculator
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://howtodoinjava.com/java9/java9-new-features-enhancements/#interface-private-methods
-
-4. https://docs.oracle.com/javase/tutorial/java/IandI/index.html
-
-5. https://docs.oracle.com/javase/specs/jls/se15/html/jls-9.html
-
-6. http://www.tcpschool.com/java/java_polymorphism_interface
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://howtodoinjava.com/java9/java9-new-features-enhancements/#interface-private-methods
+- https://docs.oracle.com/javase/tutorial/java/IandI/index.html
+- https://docs.oracle.com/javase/specs/jls/se15/html/jls-9.html
+- http://www.tcpschool.com/java/java_polymorphism_interface

@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 9주차
+# [자바 라이브 스터디] 9주차 - 예외 처리
 
 #### 목표
 
@@ -15,6 +15,10 @@
 - ⚪ Exception과 Error의 차이는?
 - ⚪ RuntimeException과 RE가 아닌 것의 차이는?
 - ⚪ 커스텀한 예외 만드는 방법
+<!-- 
+try-with-resources 
+  try-catch-finally 대신 새용 -> 기존보다 간결하고 안전한 코드 사용이 가능해짐
+-->
 
 ---
 
@@ -50,12 +54,8 @@
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://docs.oracle.com/javase/specs/jls/se15/html/jls-11.html
-
-4. https://howtodoinjava.com/java/exception-handling/
-
-5. http://www.tcpschool.com/java/java_exception_intro
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://docs.oracle.com/javase/specs/jls/se15/html/jls-11.html
+- https://howtodoinjava.com/java/exception-handling/
+- http://www.tcpschool.com/java/java_exception_intro

@@ -1,4 +1,4 @@
-# 자바 라이브 스터디 7주차
+# [자바 라이브 스터디] 7주차 - 패키지
 
 #### 목표
 
@@ -288,14 +288,9 @@ public      // 접근 제한 없음
 
 ## 참고자료
 
-1. 남궁성. *Java의 정석 3판.* 도우출판, 2016.
-
-2. Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
-
-3. https://howtodoinjava.com/java/basics/java-classpath/
-
-4. https://docs.oracle.com/javase/tutorial/java/package/index.html
-
-5. https://docs.oracle.com/javase/specs/jls/se15/html/index.html
-
-6. http://www.tcpschool.com/java/java_usingClass_package
+- 남궁성. *Java의 정석 3판.* 도우출판, 2016.
+- Evans, Benjamin J. and David Flanagan. *Java in a Nutshell.* O'Reilly Media, 2019.
+- https://howtodoinjava.com/java/basics/java-classpath/
+- https://docs.oracle.com/javase/tutorial/java/package/index.html
+- https://docs.oracle.com/javase/specs/jls/se15/html/index.html
+- http://www.tcpschool.com/java/java_usingClass_package
